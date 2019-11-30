@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">FreeMentorship</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+      <%= link_to 'HOME',users_path,class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Abot Us </a>
+        </li>
+        <li class="nav-item ">
+        <a class="nav-link" href="#">Contact Us </a>
+      </li>
+        <li class="nav-item ">
+        <%= link_to 'Inbox Session',conversations_path,class:"nav-link" %>
+      </li>     
+    </ul>
+    <%= link_to current_user.lastName,user_path(current_user.id),class:'nav-link ml-auto' %>
+    <%= link_to "Logout", session_path(current_user.id), method: :delete ,class:"nav-link"%>
+  </div>
+</nav>
+<div style="margin-top: 100px; margin-left: 100px">
+table class="table table-hover">
+  <thead>
+    <h2>list of All Sessions</h2>
+  </thead>
+  <tbody>
+    <% @conversations.each do |conversation| %>
+      <td>
+        <% if conversation.target_user(current_user).present? %>
+          <%= link_to conversation.target_user(current_user).firstName, conversation_messages_path(conversation)%>
+        <% end %>
+      </td>
+    <% end %>
+  </tbody>
+</table>
+</div>
