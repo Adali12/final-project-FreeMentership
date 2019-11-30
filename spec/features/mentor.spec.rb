@@ -16,7 +16,8 @@ RSpec.feature "Mentors management", type: :feature do
         )  
         visit  new_session_path
         fill_in  'Email' ,  with: 'adali@gmail.com'
-         fill_in  'Password' ,  with: 'password'      
+         fill_in  'Password' ,  with: 'password'
+         
     end
     scenario "Test user mentee Registration" do
         visit new_session_path
@@ -31,7 +32,7 @@ RSpec.feature "Mentors management", type: :feature do
         fill_in 'Password', with: 'password'
         fill_in 'Password confirmation', with: 'password'
         click_button 'Create User'
-        expect(page).to have_content 'User was successfully created.'
+        expect(page).to have_content 'User was complteted created.'
         visit users_path 
     end
 
@@ -48,7 +49,7 @@ RSpec.feature "Mentors management", type: :feature do
         fill_in 'Password', with: 'password'
         fill_in 'Password confirmation', with: 'password'
         click_button 'Create User'
-        expect(page).to have_content 'User was successfully created.'  
+        expect(page).to have_content 'User was complteted created.'  
         visit users_path
         click_link 'Inbox Session' 
         
@@ -66,7 +67,7 @@ scenario "Test if mentor can reply session" do
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
     click_button 'Create User'
-    expect(page).to have_content 'User was successfully created.'  
+    expect(page).to have_content 'User was complteted created.'  
     visit users_path
     click_link 'Inbox Session'    
 end
@@ -83,7 +84,7 @@ end
             fill_in 'Password', with: 'password'
             fill_in 'Password confirmation', with: 'password'
             click_button 'Create User'
-            expect(page).to have_content 'User was successfully created.'
+            expect(page).to have_content 'User was complteted created.'
             visit users_path
             fill_in 'Search', with: 'Aimable'
            
@@ -104,7 +105,7 @@ end
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
     click_button 'Create User'
-    expect(page).to have_content 'User was successfully created.'
     visit new_admin_user_path  
+
 end
 end
