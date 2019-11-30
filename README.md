@@ -1,28 +1,14 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 Free mentorship project
+
+#	Function	EMAIL	PASSWORD
+
+1	MENTEE	mentee@gmail.com	password
+
+2	MENTOR	mentor@gmail.com	password
+
+3	ADMIN	admin@gmail.com	     password
+
 
 Overview
 Free Mentors project is a social initiative where accomplished professionals become role models to young people to provide free mentorship sessions
@@ -64,21 +50,27 @@ Mentee can view all in box sessions
 -admin change a user to a mentor
 
 Catalog design
+
 https://docs.google.com/spreadsheets/d/1pNkXqFpm_XCng5xmqoOgSv42cv6RtQ94Lgmtg_oGHIQ/edit?usp=sharing
 
 table definition
+
 https://docs.google.com/spreadsheets/d/1xCA6miIzimW75smRjs0JJ599EY0Yiu2_LXnumsbI-KE/edit?usp=sharing
 
 ER diagram
+
 https://drive.google.com/file/d/1fCebXRgt5yDgJZiiCOHbX84RoLMJBNZf/view?usp=sharing
 
 Screen transition diagram
+
 https://drive.google.com/file/d/1SeZ0t9jGY9-OKz33o5rIoKHEpJfd1b2n/view?usp=sharing
 
 Screen wire frame (smartphone assumption)
+
 https://docs.google.com/presentation/d/1i22z2rLsVflVHJkGJ1vjcO0M0cNOKXYuUZlN5kQpWzw/edit?usp=sharing
 
 Scheduled use Gem
+
 rspec-rails
 
 bootstrap
@@ -88,4 +80,10 @@ active storage
 jquery-rails
 
 ransack
+
+Skills
+
+Message function
+
+Comment function
 
