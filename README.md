@@ -46,7 +46,7 @@ Functions list
 
 -admin can view all users
 
-Mentee can view all in box sessions
+-Mentee can view  in box sessions
 
 -admin can delete and change the function of users
 
