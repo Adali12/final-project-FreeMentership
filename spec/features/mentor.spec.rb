@@ -35,7 +35,6 @@ RSpec.feature "Mentors management", type: :feature do
         expect(page).to have_content 'User was complteted created.'
         visit users_path 
     end
-
     scenario "Test if mentee can send session" do
         visit new_session_path
         click_link 'Signup'
@@ -51,8 +50,7 @@ RSpec.feature "Mentors management", type: :feature do
         click_button 'Create User'
         expect(page).to have_content 'User was complteted created.'  
         visit users_path
-        click_link 'Inbox Session' 
-        
+        click_link 'Inbox Session'      
 end
 scenario "Test if mentor can reply session" do
     visit new_session_path
