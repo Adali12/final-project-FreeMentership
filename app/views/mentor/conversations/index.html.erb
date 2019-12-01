@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item active">
-      <%= link_to 'HOME',users_path,class:"nav-link" %>
+      <%= link_to 'Mentor',mentor_users_path,class:"nav-link" %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Abot Us </a>
@@ -16,7 +16,7 @@
         <a class="nav-link" href="#">Contact Us </a>
       </li>
         <li class="nav-item ">
-        <%= link_to 'Inbox Session',conversations_path,class:"nav-link" %>
+        <%= link_to 'Inbox Session',mentor_conversations_path,class:"nav-link" %>
       </li>     
     </ul>
     <%= link_to current_user.lastName,user_path(current_user.id),class:'nav-link ml-auto' %>
@@ -24,18 +24,13 @@
   </div>
 </nav>
 <div style="margin-top: 100px; margin-left: 100px">
-table class="table table-hover">
-  <thead>
-    <h2>list of All Sessions</h2>
-  </thead>
-  <tbody>
-    <% @conversations.each do |conversation| %>
-      <td>
-        <% if conversation.target_user(current_user).present? %>
-          <%= link_to conversation.target_user(current_user).firstName, conversation_messages_path(conversation)%>
-        <% end %>
-      </td>
+<h4>ALL Received Session</h4>
+<% @conversations.each do |conversation| %>
+  <div class="card" style="width:35rem">
+    <% if conversation.target_user(current_user).present? %>
+      <%= link_to conversation.target_user(current_user).firstName, conversation_messages_path(conversation)%>
     <% end %>
-  </tbody>
-</table>
+    </div>
+<% end %>
 </div>
+
